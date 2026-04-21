@@ -1,3 +1,4 @@
+'''
 import os
 from core.security import verify_password
 os.environ["PYTHONIOENCODING"] = "utf-8"
@@ -28,7 +29,7 @@ from core.security import *
 #  CONFIGURACIÓN CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.getenv("HOST_FRONT")],  # después lo podemos restringir
+    allow_origins=["*"],  # después lo podemos restringir
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -39,3 +40,12 @@ app.add_middleware(
 def home():
    
     return {"msg": "Hola backend"}
+'''
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def test():
+    return {"ok": True}

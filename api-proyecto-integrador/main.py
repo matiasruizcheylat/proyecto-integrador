@@ -1,4 +1,3 @@
-'''
 import os
 from core.security import verify_password
 os.environ["PYTHONIOENCODING"] = "utf-8"
@@ -49,3 +48,4 @@ app = FastAPI()
 @app.get("/")
 def test():
     return {"ok": True}
+'''

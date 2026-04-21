@@ -28,7 +28,7 @@ Incluye autenticación mediante JWT y persistencia en PostgreSQL.
 Clonar el repositorio y acceder al directorio de la API:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/matiasruizcheylat/proyecto-integrador.git
 cd api-proyecto-integrador
 ```
 

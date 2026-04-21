@@ -27,7 +27,7 @@ incluyendo autenticación de usuarios.
 Clonar el repositorio y acceder al directorio del frontend:
 
 ```
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/matiasruizcheylat/proyecto-integrador.git
 cd web-proyecto-integrador
 ```
 

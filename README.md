@@ -66,7 +66,7 @@ Este proyecto fue desarrollado como práctica integradora fullstack con el objet
 ### 1. Clonar repositorio
 
 ```bash
-git clone <URL_DEL_REPO>
+git clone https://github.com/matiasruizcheylat/proyecto-integrador.git
 ```
 
 ---

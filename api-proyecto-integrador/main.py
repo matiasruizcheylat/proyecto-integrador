@@ -1,3 +1,4 @@
+'''
 import os
 from core.security import verify_password
 os.environ["PYTHONIOENCODING"] = "utf-8"
@@ -41,11 +42,15 @@ def home():
     return {"msg": "Hola backend"}
 '''
 
+
 from fastapi import FastAPI
 
+from routers import home
+
 app = FastAPI()
+
+app.include_router(home.router)
 
 @app.get("/")
 def test():
     return {"ok": True}
-'''

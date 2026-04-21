@@ -1,0 +1,3 @@
+DROP SCHEMA IF EXISTS empleados CASCADE;
+
+CREATE SCHEMA empleados;

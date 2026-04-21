@@ -1,0 +1,107 @@
+.reporte-container {
+  padding: 10px;
+  max-width:900px;
+  margin:10px;
+}
+
+.reporte-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.reporte-cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reporte-card {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reporte-label {
+  font-size: 14px;
+  color: #888;
+}
+
+.reporte-value {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.reporte-card.success {
+  background-color: #e6f7ff;
+}
+
+.reporte-card.danger {
+  background-color: #fff1f0;
+}
+
+.reporte-card.dangerMore {
+  background-color: #eee1e0;
+}
+
+.reporte-chart-container {
+  background: white;
+  max-width:1200px;
+  width:90%;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.chart-bar-container,
+.chart-pie-container {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;   /* 👈 CLAVE */
+  aspect-ratio: 16 / 9;
+}
+
+
+.chart-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.charts-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.chart-controls button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f3f4f6;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.chart-controls button:hover {
+  background-color: #e0e7ff;
+  border-color: #6366f1;
+}
+
+/* botón activo */
+.chart-controls button.active {
+  background-color: #4f46e5;
+  color: white;
+  border-color: #4f46e5;
+}
+

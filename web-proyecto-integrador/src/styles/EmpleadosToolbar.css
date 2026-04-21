@@ -1,0 +1,70 @@
+.toolbar-container {
+  max-width: 1180px;
+  margin: 10px auto;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  flex-wrap: wrap; /* 🔥 clave responsive */
+
+  background: #f5f6f8;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.toolbar-left,
+.toolbar-right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-toggle {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-toggle:hover {
+  background-color: #5a6268;
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+}
+
+
+@media (max-width: 870px) {
+  .toolbar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar-left,
+  .toolbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-toggle,
+  .btn-add {
+    width: 100%;
+     max-width:300px;
+    text-align: center;
+        margin:0 auto;
+  }
+}

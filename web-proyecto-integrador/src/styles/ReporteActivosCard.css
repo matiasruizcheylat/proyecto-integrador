@@ -1,0 +1,46 @@
+.reporte-container {
+  padding: 20px;
+}
+
+.reporte-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.reporte-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.reporte-card {
+  flex: 1;
+  min-width: 150px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reporte-label {
+  font-size: 14px;
+  color: #888;
+}
+
+.reporte-value {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Variantes */
+.reporte-card.activos {
+  background-color: #e6f7ff;
+}
+
+.reporte-card.inactivos {
+  background-color: #fff1f0;
+}

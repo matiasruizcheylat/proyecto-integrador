@@ -1,0 +1,162 @@
+h2{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.table-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: #fafefa;
+   overflow-x: auto;
+}
+
+
+.table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
+ 
+}
+
+.table-empleados {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.table-empleados th {
+  background-color: #2c3e50;
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+
+/* Header */
+.inactivos th{
+  background-color: #7b0c07 !important;
+}
+
+/* Celdas */
+.table-empleados td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover fila */
+.table-empleados tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Columnas ordenables */
+.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Acciones */
+.col-acciones {
+  text-align: center;
+  white-space: nowrap;
+  font-size:18px;
+  
+}
+
+.col-acciones button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 4px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.col-acciones button:hover {
+  transform: scale(1.2);
+}
+
+/* Estado */
+td:nth-child(5) {
+  font-weight: bold;
+}
+
+@media (min-width: 870px) and (max-width: 1220px) { 
+  .col-fecha, .col-estado{ display:none;}
+  .table-empleados th,
+  .table-empleados td {
+    padding: 8px;
+    font-size: clamp(16px, 1.2vw, 16px);
+  }
+}
+
+@media (max-width: 870px) {
+  .col-apellido,
+  .col-fecha,
+  .col-estado {
+    display: none;
+  }
+
+  .table-empleados th,
+  .table-empleados td {
+    padding: 8px;
+    font-size: clamp(14px, 1.1vw, 14px);
+  }
+
+
+  .col-acciones td button {
+    font-size: 18px;
+  }
+
+
+}
+
+
+.success-box {
+  max-width: 1200px;
+  margin:10px auto;
+  background: #e6ffed;
+  color: #067d2e;
+  border: 1px solid #b7ebc6;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.success-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.empty-state {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+
+  text-align: center;
+
+  background-color: #f8f9fa;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+
+  color: #666;
+  font-size: 16px;
+}
+
+.fila-inactiva{
+  background-color: rgba(171, 8, 8, 0.08);
+}
+
+.empleados-inactivos{
+  color:#800;
+}

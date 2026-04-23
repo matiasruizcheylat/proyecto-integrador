@@ -2,10 +2,10 @@ import axios from "axios";
 
 export const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
+
 });
 
-
-// 🔐 INTERCEPTOR → agrega token automáticamente
+// 🔥 interceptor de request
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("access_token");
 
@@ -16,14 +16,17 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// 🔥 Manejo global de 401
+// 🔥 interceptor de response (manejo global de errores)
 api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
       localStorage.removeItem("access_token");
-      window.location.href = "/login";
+      
     }
+
     return Promise.reject(error);
   }
 );
+
+export default api;

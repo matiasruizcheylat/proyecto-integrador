@@ -1,7 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthLayout from "../layouts/AuthLayout";
-import Card from "../components/Card";
 import { login as loginService } from "../services/auth.service";
 import { useAuth } from "../hooks/useAuth"; 
 import "../styles/global.css";
@@ -23,22 +21,35 @@ export default function Login() {
   };
 
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
+  console.log("SUBMIT");
 
-    try {
-      const data = await loginService(form);
-      login(data.access_token);
-      //localStorage.setItem("access_token", data.access_token);
-      navigate("/home");
-    }catch {
-  Swal.fire({
-    icon: "error",
-    title: "Error de autenticación",
-    text: "Usuario o contraseña incorrectos",
-    confirmButtonColor: "#4f46e5",
-  });
-}
-  };
+  try {
+    const data = await loginService(form);
+    console.log("LOGIN OK:", data);
+
+    login(data.access_token);
+    navigate("/home");
+
+  } catch (error: any) {
+    console.log("ERROR REAL:", error);
+
+    if (error.response?.status === 401) {
+      Swal.fire({
+        icon: "error",
+        title: "Credenciales incorrectas",
+        text: "Usuario o contraseña inválidos",
+        confirmButtonColor: "#4f46e5",
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Error inesperado",
+        text: "Mirá la consola",
+      });
+    }
+  }
+};
 
   return (<MainLayout>
     <div className="login-container">
@@ -60,9 +71,9 @@ export default function Login() {
       onChange={handleChange}
     />
 
-    <button className="login-button">
-      Ingresar
-    </button>
+<button type="submit" className="login-button">
+  Ingresar
+</button>
   </form>
 </div>
 </MainLayout>

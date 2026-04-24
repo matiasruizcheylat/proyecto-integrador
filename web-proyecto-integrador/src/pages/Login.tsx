@@ -20,18 +20,18 @@ export default function Login() {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
   e.preventDefault();
-  console.log("SUBMIT");
+
 
   try {
     const data = await loginService(form);
-    console.log("LOGIN OK:", data);
 
     login(data.access_token);
     navigate("/home");
-
+     setLoading(true);
   } catch (error: any) {
     console.log("ERROR REAL:", error);
 
@@ -49,8 +49,22 @@ export default function Login() {
         text: "Mirá la consola",
       });
     }
+  }finally{
+     setLoading(false);
   }
 };
+
+if (loading) {
+  return (
+    <MainLayout>
+      <div className="login-container">
+        <h2 className="login-title">Despertando servidor...</h2>
+        <p>Validando credenciales.</p>
+        <p>Esto puede tardar entre 30 segundos y 2 minutos.</p>
+      </div>
+    </MainLayout>
+  );
+}
 
   return (<MainLayout>
     <div className="login-container">
@@ -72,8 +86,9 @@ export default function Login() {
       onChange={handleChange}
     />
 
-<button type="submit" className="login-button">
-  Ingresar
+
+<button type="submit" className="login-button" disabled={loading}>
+  {loading ? "Ingresando..." : "Ingresar"}
 </button>
   </form>
 </div>

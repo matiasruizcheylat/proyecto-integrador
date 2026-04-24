@@ -27,12 +27,13 @@ export default function Login() {
 
 
   try {
+     setLoading(true);
     const data = await loginService(form);
 
     login(data.access_token);
     await new Promise(resolve => setTimeout(resolve, 5000));
     navigate("/home");
-     setLoading(true);
+    
   } catch (error: any) {
     console.log("ERROR REAL:", error);
 

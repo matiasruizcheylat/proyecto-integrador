@@ -19,7 +19,6 @@ export default function EmpleadoEditPage() {
     const fetchEmpleado = async () => {
       try {
         const data = await getEmpleadoDetalle({   id: id ? Number(id) : undefined });
-        console.log("EMPLEADO:", data); // 👈 debug
         setEmpleado(data);
       } catch (error) {
         console.error(error);

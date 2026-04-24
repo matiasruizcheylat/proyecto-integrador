@@ -56,7 +56,6 @@ export default function EmpleadosPage({  }: Props) {
   const toggleEstado = () => {
   //setMostrarActivos((prev) => !prev);
 
-  console.log(mostrarActivos);
    if (estado === "activo") {
       navigate("/empleados/inactivos");
       

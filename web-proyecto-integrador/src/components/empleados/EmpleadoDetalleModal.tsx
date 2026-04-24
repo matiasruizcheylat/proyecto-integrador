@@ -12,7 +12,6 @@ export default function EmpleadoDetalleModal({ empleadoId, onClose }: Props) {
   const [empleado, setEmpleado] = useState<any>(null);
   const { areas, puestos } = useAreaPuesto(); // 🔥 para mapear nombres
 
-  console.log("EMPLEADO MODAL:", empleado);
 
   useEffect(() => {
     const fetchEmpleado = async () => {

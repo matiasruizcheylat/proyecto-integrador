@@ -59,10 +59,17 @@ export default function Login() {
 if (loading) {
   return (
     <MainLayout>
-      <div className="login-container">
-        <h2 className="login-title">Despertando servidor...</h2>
-        <p>Validando credenciales.</p>
-        <p>Esto puede tardar entre 30 segundos y 2 minutos.</p>
+      <div className="loading-screen">
+        <div className="loading-spinner"></div>
+
+        <h2 className="loading-title">
+          Despertando servidor...
+        </h2>
+
+        <p className="loading-text">
+          Validando credenciales.<br />
+          Esto puede tardar entre 30 segundos y 2 minutos.
+        </p>
       </div>
     </MainLayout>
   );

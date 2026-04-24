@@ -1,9 +1,9 @@
 import "./ReporteGrid.css";
-import type { ReporteArea } from "../../types/reportes";
+import type { ReporteItem } from "../../types/reportes";
 
 interface Props {
   title: string;
-  data: ReporteArea[];
+  data: ReporteItem[];
 }
 
 export default function ReporteGrid({ title, data }: Props) {

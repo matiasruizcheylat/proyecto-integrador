@@ -73,17 +73,3 @@ export default function Pagination({ page, totalPages, onPageChange }: Props) {
 
 }
 
-// 🎨 estilos
-const buttonStyle: React.CSSProperties = {
-  padding: "6px 10px",
-  borderRadius: "8px",
-  border: "1px solid #ccc",
-  background: "white",
-  cursor: "pointer",
-};
-
-const activeStyle: React.CSSProperties = {
-  background: "#333",
-  color: "white",
-  fontWeight: "bold",
-};

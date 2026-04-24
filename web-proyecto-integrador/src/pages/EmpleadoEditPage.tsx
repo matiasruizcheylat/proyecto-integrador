@@ -18,7 +18,7 @@ export default function EmpleadoEditPage() {
   useEffect(() => {
     const fetchEmpleado = async () => {
       try {
-        const data = await getEmpleadoDetalle({ id: id });
+        const data = await getEmpleadoDetalle({   id: id ? Number(id) : undefined });
         console.log("EMPLEADO:", data); // 👈 debug
         setEmpleado(data);
       } catch (error) {
@@ -34,6 +34,7 @@ export default function EmpleadoEditPage() {
   //  UPDATE
   const handleUpdate = async (data: any) => {
     await editEmpleado(Number(id), data); 
+    console.log("ex suegra culona mmmm le quiero dar dar dar dar dar ");
     navigate("/empleados", {
       state: { success: "Empleado editado correctamente" },
     });

@@ -6,8 +6,12 @@ import type { EmpleadoCreateDTO } from "../types/empleado";
 interface GetEmpleadosParams {
   page?: number;
   limit?: number;
+  page_size?:number;
+  order_by? :string |null;
   nombre?: string;
   apellido?: string;
+  documento?: string;
+  activo?:boolean;
 }
 
 interface GetEmpleadoDetalleParam {

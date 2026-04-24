@@ -147,7 +147,7 @@ export default function EmpleadoForm({ onSubmit, initialData }: Props) {
 
   const handleAsignacionChange = (
     index: number,
-    field: string,
+    field: "areaId" | "puestoId",
     value: string
   ) => {
     const nuevas = [...asignaciones];

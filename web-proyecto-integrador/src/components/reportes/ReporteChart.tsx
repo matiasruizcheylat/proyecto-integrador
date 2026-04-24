@@ -139,7 +139,7 @@ export default function ReporteChart({ title, data, dataKey, nameKey }: Props) {
                     dataKey="value"
                     nameKey="name"
                     outerRadius="70%"
-                    label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+                    label={({ percent }) => `${((percent ?? 0) * 100).toFixed(0)}%`}
                   >
                     {pieData.map((_, index) => (
                       <Cell key={index} fill={COLORS[index % COLORS.length]} />

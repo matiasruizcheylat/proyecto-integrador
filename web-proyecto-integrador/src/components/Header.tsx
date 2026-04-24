@@ -5,8 +5,8 @@ export default function Header({
   onMenuClick,
   isMobile,
 }: {
-  onMenuClick: () => void;
-  isMobile: boolean;
+  onMenuClick?: () => void;
+  isMobile?: boolean;
 }) {
   const navigate = useNavigate();
   const { token, logout } = useAuth();

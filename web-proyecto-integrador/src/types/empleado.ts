@@ -5,6 +5,7 @@ export interface Empleado {
   nroDocumento: string;
   fechaIngreso: string;
   activo: boolean;
+  fechaEgreso?: string | null;
 }
 
 

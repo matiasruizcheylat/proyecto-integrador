@@ -6,7 +6,7 @@ import EmpleadoTable from "../components/empleados/EmpleadoTable";
 import { useLocation, useNavigate  } from "react-router-dom";
 
 
-import MainLayout from "../layouts/MainLayout";
+
 import DashboardLayout from "../layouts/DashboardLayout";
 
 
@@ -14,7 +14,7 @@ import EmpleadoFilters from "../components/empleados/EmpleadoFilters";
 import EmpleadosToolbar from "../components/empleados/EmpleadosToolbar";
 import Pagination from "../components/empleados/Pagination";
 
-import EmpleadoDetalleModal from "../components/empleados/EmpleadoDetalleModal";
+
 
 import { activarEmpleado, desactivarEmpleado, eliminarEmpleado } from "../services/empleado.service";
 import Swal from "sweetalert2";
@@ -26,7 +26,7 @@ interface Props {
 
 
 
-export default function EmpleadosPage({ activoDefault = true }: Props) {
+export default function EmpleadosPage({  }: Props) {
   const [empleados, setEmpleados] = useState<Empleado[]>([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -44,14 +44,14 @@ export default function EmpleadosPage({ activoDefault = true }: Props) {
 
   const page_size = 10;
 
-  const [empleadoSeleccionado, setEmpleadoSeleccionado] = useState<number | null>(null);
-  const [empleadoEliminado, setEmpleadoEliminado] = useState<number | null>(null);
+
+
 
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   
 
-  const [mostrarActivos, setMostrarActivos] = useState(true);
+  const [mostrarActivos] = useState(true);
 
   const toggleEstado = () => {
   //setMostrarActivos((prev) => !prev);
@@ -75,7 +75,7 @@ export default function EmpleadosPage({ activoDefault = true }: Props) {
   const modo = estado === "activo" ? "activos" : "inactivos";
   
 
-  /*
+  
   useEffect(() => {
   if (location.state?.success) {
     setSuccessMessage(location.state.success);
@@ -84,7 +84,7 @@ export default function EmpleadosPage({ activoDefault = true }: Props) {
     navigate(location.pathname, { replace: true });
   }
 }, [location, navigate]);
-*/
+
 
 useEffect(() => {
   fetchEmpleados(buildParams(1));
@@ -343,6 +343,7 @@ const handleEliminar = async (id: number) => {
       onSort={handleSort}
       orderBy={orderBy}
       modo={modo}
+      fechaDesactivacion={null}
       onActivar={handleActivar}
       onDesactivar={handleDesactivar}
       onEliminar={handleEliminar} />

@@ -10,10 +10,12 @@ interface Props {
   orderBy: string | null;
   fechaDesactivacion: string | null;
   modo: "activos" | "inactivos";
-  onActivar?: (id: number) => void;
-  onDesactivar?: (id: number) => void;
+  onActivar?:  (id: number, fechaEgreso: string | null) => Promise<void>;
+  onDesactivar?: (id: number, fechaEgreso: string | null) => Promise<void>;
   onEliminar?:(id: number) => void;
 }
+
+
 
 export default function EmpleadoTable({ empleados, onSort, orderBy, modo, onActivar, onDesactivar, onEliminar }: Props) {
   const navigate = useNavigate();
@@ -100,7 +102,7 @@ export default function EmpleadoTable({ empleados, onSort, orderBy, modo, onActi
             <button title="Ver" onClick={() => setEmpleadoSeleccionado(emp.id)}>👁</button>
             <button title="Editar"  onClick={() => irAEditar(emp.id)}>✏️</button>
            {modo === "inactivos" && (() => {
-  const habilitado = puedeActivar(emp.fechaEgreso);
+  const habilitado = puedeActivar(emp.fechaEgreso ?? null);
 
 
     
@@ -114,7 +116,7 @@ export default function EmpleadoTable({ empleados, onSort, orderBy, modo, onActi
                   : "No se puede activar (más de 29 días)"
               }
               disabled={!habilitado}
-              onClick={() => habilitado && onActivar && onActivar(emp.id, emp.fechaEgreso)}
+              onClick={() => habilitado && onActivar && onActivar(emp.id, emp.fechaEgreso ?? null)}
             >
               ✅
             </button>
@@ -127,7 +129,7 @@ export default function EmpleadoTable({ empleados, onSort, orderBy, modo, onActi
         <button
           className="btn-desactivar"
           title="Desactivar empleado"
-          onClick={() => onDesactivar && onDesactivar(emp.id)}
+          onClick={() => onDesactivar && onDesactivar(emp.id, emp.fechaEgreso ?? null)}
         >
           ⛔
         </button>

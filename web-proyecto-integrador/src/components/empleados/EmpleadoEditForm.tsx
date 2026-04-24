@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 import "../../styles/EmpleadoForm.css";
-import type { EmpleadoDetalle } from "../../types/empleado";
+import type { EmpleadoDetalleResponse } from "../../types/empleado";
 
 interface Props {
-  empleado: EmpleadoDetalle;
+  empleado: EmpleadoDetalleResponse;
   onSubmit: (data: any) => Promise<void>;
 }
 
@@ -186,7 +186,7 @@ export default function EmpleadoEditForm({ empleado, onSubmit }: Props) {
 
   const handleAsignacionChange = (
     index: number,
-    field: string,
+    field: "areaId" | "puestoId" ,
     value: string
   ) => {
     const nuevas = [...asignaciones];

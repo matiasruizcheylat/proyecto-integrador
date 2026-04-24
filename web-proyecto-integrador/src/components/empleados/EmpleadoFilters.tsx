@@ -1,6 +1,5 @@
 
 import "../../styles/EmpleadoFilter.css";
-import { useNavigate } from "react-router-dom";
 
 type Criterio = "nombre" | "documento";
 
@@ -18,7 +17,6 @@ interface Props {
   onEstadoChange: (v: string) => void;
 
   onBuscar: () => void;
-  onAgregar: () => void; 
   onLimpiar: () => void;
 }
 
@@ -27,17 +25,14 @@ export default function EmpleadoFilters({
   nombre,
   apellido,
   documento,
-  estado,
   onCriterioChange,
   onNombreChange,
   onApellidoChange,
   onDocumentoChange,
-  onEstadoChange,
   onBuscar,
   onLimpiar,
-  onAgregar, 
+
 }: Props) {
-  const navigate = useNavigate();
   return (
     <div className="filters-wrapper">
       <div className="filters-container">

@@ -47,7 +47,7 @@ export default function DashboardLayout({
             : "0",
         }}
       >
-        <Sidebar onClose={() => setIsOpen(false)} />
+        <Sidebar />
       </div>
 
       {/* Main */}

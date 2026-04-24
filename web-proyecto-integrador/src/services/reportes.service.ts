@@ -16,7 +16,7 @@ export async function getPorPuesto (): Promise<ReportePuesto[]> {
   return res.data;
 }
 
-export async function getAntiguedad (): Promise<ReporteAntiguedad[]> {
+export async function getAntiguedad (): Promise<ReporteAntiguedad> {
    const res =await api.get("/resumen/antiguedad");
   return res.data;
 }

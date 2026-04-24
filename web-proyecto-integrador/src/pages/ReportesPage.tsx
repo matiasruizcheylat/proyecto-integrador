@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ReporteCards from "../components/reportes/ReporteCards";
-import ReporteGrid from "../components/reportes/ReporteGrid";
 import ReporteChart from "../components/reportes/ReporteChart";
 
 import  { getResumen, getPorArea, getPorPuesto, getAntiguedad} from "../services/reportes.service";
@@ -13,7 +12,7 @@ export default function ReportesPage() {
   const [resumen, setResumen] = useState<ReporteResumen | null>(null);
   const [areas, setAreas] = useState<ReporteArea[]>([]);
    const [puestos, setPuestos] = useState<ReportePuesto[]>([]);
-  const [antiguedad, setAntiguedad] = useState<ReporteAntiguedad[]>([]);
+  const [antiguedad, setAntiguedad] = useState<ReporteAntiguedad | null>(null);
 
   useEffect(() => {
     getResumen().then(setResumen);
@@ -50,7 +49,7 @@ export default function ReportesPage() {
           { label: "Total", value: resumen.total },
           { label: "Activos", value: resumen.activos, type: "success" },
           { label: "Inactivos", value: resumen.inactivos, type: "danger" },
-          { label: "Eliminados", value: resumen.eliminados, type: "dangerMore" }
+          { label: "Eliminados", value: resumen.eliminados, type: "danger" }
         ]}
       />
       <div className="antiguedad-card">
@@ -59,7 +58,7 @@ export default function ReportesPage() {
       </span>
 
       <h3 className="antiguedad-valor">
-        {formatearAniosMeses(antiguedad.promedio)}
+        {formatearAniosMeses(antiguedad?.promedio ?? 0)}
       </h3>
     </div>
 

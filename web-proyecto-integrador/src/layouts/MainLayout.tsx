@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 interface Props {
   children: ReactNode;
+  
 }
 
 export default function MainLayout({ children }: Props) {

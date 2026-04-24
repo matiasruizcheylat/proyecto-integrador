@@ -1,4 +1,5 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState} from "react";
+import type {ChangeEvent, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { login as loginService } from "../services/auth.service";
 import { useAuth } from "../hooks/useAuth"; 
@@ -80,24 +81,3 @@ export default function Login() {
   );
 }
 
-const styles = {
-  
-  input: {
-    width: "100%",
-    maxWidth:"300px",
-    padding: "10px 0px",
-    margin:"10px auto",
-    display:"block"
-  },
-  button: {
-    width: "100%",
-    maxWidth:"300px",
-    padding: "10px 0px",
-    background: "#4f46e5",
-    color: "white",
-    margin:"10px auto",
-    border:"none",
-    display:"block"
-  },
-
-};

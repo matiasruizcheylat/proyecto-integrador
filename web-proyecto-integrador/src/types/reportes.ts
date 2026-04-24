@@ -2,6 +2,15 @@ export interface ReporteResumen {
   total: number;
   activos: number;
   inactivos: number;
+  eliminados: number;
+}
+
+
+export interface ReporteItem {
+  area?: string;
+  puesto?: string;
+  activos: number;
+  inactivos: number;
 }
 
 export interface ReporteArea {

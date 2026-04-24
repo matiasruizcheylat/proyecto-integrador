@@ -1,18 +1,14 @@
-import { useNavigate } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
 import { useAuth } from "../hooks/useAuth";
 
 import "../styles/Home.css"
 
 export default function Home() {
-  const navigate = useNavigate();
+
 
   const { token } = useAuth();
 
-  const logout = () => {
-    localStorage.removeItem("access_token");
-    navigate("/home");
-  };
+
 
   return (
     <DashboardLayout>

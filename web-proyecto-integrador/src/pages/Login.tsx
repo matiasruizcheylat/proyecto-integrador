@@ -30,6 +30,7 @@ export default function Login() {
     const data = await loginService(form);
 
     login(data.access_token);
+    await new Promise(resolve => setTimeout(resolve, 5000));
     navigate("/home");
      setLoading(true);
   } catch (error: any) {

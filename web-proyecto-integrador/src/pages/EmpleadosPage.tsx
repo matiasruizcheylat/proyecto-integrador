@@ -51,8 +51,6 @@ export default function EmpleadosPage({  }: Props) {
 
   
 
-  const [mostrarActivos] = useState(true);
-
   const toggleEstado = () => {
   //setMostrarActivos((prev) => !prev);
 

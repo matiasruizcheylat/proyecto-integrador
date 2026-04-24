@@ -34,7 +34,6 @@ export default function EmpleadoEditPage() {
   //  UPDATE
   const handleUpdate = async (data: any) => {
     await editEmpleado(Number(id), data); 
-    console.log("ex suegra culona mmmm le quiero dar dar dar dar dar ");
     navigate("/empleados", {
       state: { success: "Empleado editado correctamente" },
     });

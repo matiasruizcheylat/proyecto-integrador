@@ -31,11 +31,9 @@ export default function Login() {
     const data = await loginService(form);
 
     login(data.access_token);
-    await new Promise(resolve => setTimeout(resolve, 5000));
     navigate("/home");
     
   } catch (error: any) {
-    console.log("ERROR REAL:", error);
 
     if (error.response?.status === 401) {
       Swal.fire({

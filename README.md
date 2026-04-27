@@ -14,6 +14,22 @@ URL: https://proyecto-integrador-eight-gray.vercel.app/home
 **Usuario:** `demo`  
 **Contraseña:** `demo123`
 
+## 📸 Capturas
+
+### Login
+![Login](demo-capturas/login.png)
+
+### Gestión de empleados
+![Listado](demo-capturas/empleados-listado.png)
+
+### Alta de empleado
+![Alta](demo-capturas/empleado-alta.png)
+
+### Detalle de empleado
+![Detalle](demo-capturas/empleado-detalle.png)
+
+### Reportes
+![Reportes](demo-capturas/reportes-dashboard.png)
 
 ##  Objetivo del proyecto
 

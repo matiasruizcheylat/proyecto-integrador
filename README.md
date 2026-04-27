@@ -1,14 +1,18 @@
-#  Proyecto Integrador - Portal de Trámites
+#  Proyecto Integrador -  Full Stack
 
-Aplicación web fullstack para la gestión y visualización de servicios y trámites, con autenticación de usuarios mediante JWT.
-
+Aplicación web fullstack para la gestión y visualización de servicios y trámites, con autenticacion de usuarios basado en JWT
 ---
 
-##  Demo
+# Proyecto Integrador
 
- (Agregar link cuando esté deployado)
+Sistema de gestión de empleados desarrollado con React, FastAPI y PostgreSQL.
 
----
+## 🚀 Demo Online
+
+URL: https://proyecto-integrador-eight-gray.vercel.app/home
+
+**Usuario:** `demo`  
+**Contraseña:** `demo123`
 
 
 ##  Objetivo del proyecto
@@ -45,7 +49,7 @@ Este proyecto fue desarrollado como práctica integradora fullstack con el objet
 
 * FastAPI
 * PostgreSQL
-* JWT (python-jose)
+* JWT (python)
 * Passlib (bcrypt)
 
 ---
@@ -79,7 +83,7 @@ npm install
 npm run dev
 ```
 
-Aplicación disponible en:
+Aplicación local disponible en:
 
 ```
 http://localhost:8000

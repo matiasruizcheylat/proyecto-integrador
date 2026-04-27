@@ -118,6 +118,13 @@ npm run preview   # Preview del build
 
 ---
 
+## 🚀 Demo Online
+
+URL: https://proyecto-integrador-eight-gray.vercel.app/home
+
+**Usuario:** `demo`  
+**Contraseña:** `demo123`
+
 ##  Notas
 
 * Asegurarse de que la API esté corriendo antes de iniciar sesión

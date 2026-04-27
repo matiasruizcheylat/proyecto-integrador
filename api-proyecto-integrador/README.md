@@ -145,8 +145,8 @@ sqlacodegen postgresql://user:password@localhost/mi_db --schema empleados > mode
 
 Disponible al ejecutar el servidor:
 
-* Swagger UI → http://127.0.0.1:8000/docs
-* ReDoc → http://127.0.0.1:8000/redoc
+* Swagger UI → http://127.0.0.1:8001/docs
+* ReDoc → http://127.0.0.1:8001/redoc
 
 ---
 

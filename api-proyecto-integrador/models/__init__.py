@@ -5,6 +5,7 @@ from .area import Area
 from .puesto import Puesto
 from .empleadoAreaPuesto import EmpleadoAreaPuesto
 from .areaPuestoCompatible import AreaPuestoCompatible
+from .valoresNutrietes import ValoresNutrientes
 from .usuario import Usuario
 
 __all__ = [
@@ -13,5 +14,6 @@ __all__ = [
     "Area",
     "Puesto",
     "EmpleadoAreaPuesto",
-    "AreaPuestoCompatible"
+    "AreaPuestoCompatible",
+    "ValoresNutrientes"
 ]

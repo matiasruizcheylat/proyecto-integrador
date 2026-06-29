@@ -10,9 +10,6 @@ ROOT_DIR = os.path.dirname(
 
 sys.path.append(ROOT_DIR)
 
-print(ROOT_DIR)
-
-
 
 from datetime import datetime, timedelta
 from cronProceso import ejecutar_proceso
@@ -48,11 +45,6 @@ HORARIOS=[
     "08:00",
     "09:00",
     "10:00",
-    "10:50",
-    "10:52",
-    "10:54",
-    "10:56",
-    "10:58",
     "11:00",
     "12:00",
     "13:00",
@@ -160,5 +152,5 @@ while True:
         
         ultimo_ejecutado = horario
     
-    time.sleep(10)
+    time.sleep(300)
 
